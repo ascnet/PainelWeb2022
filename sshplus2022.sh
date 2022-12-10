@@ -34,7 +34,7 @@ menu(){
 root_password=$(echo $RANDOM | md5sum | head -c 10; echo;)
 cake=$(curl https://bigbolgames.com)
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB SSHPlus 2022 Centos 7" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB ASCNET VPN 2022 Centos 7" ; tput sgr0 ; echo ""
 echo "Continuar? Y\n"
 echo -n "> "
 read option
@@ -82,14 +82,14 @@ phpmyadminfix
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf
-wget https://worldofdragon.net/phpfix/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/phpMyAdmin.conf?token=GHSAT0AAAAAAB27JO64MW5BTKRLK2O7H34CY4UUCWA -O /etc/httpd/conf.d/phpMyAdmin.conf
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
 installweb
 }
 installweb(){
 cd /var/www/html
-wget https://worldofdragon.net/painel/2022sshplus/2022.zip
+wget https://github.com/ascnet/PainelWeb2022/raw/main/2022.zip
 unzip 2022.zip
 sed -i "s;1010;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/
@@ -97,7 +97,7 @@ cd
 createdb
 }
 createdb(){
-wget https://worldofdragon.net/painel/2022sshplus/sshplus.sql
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus2022.sh?token=GHSAT0AAAAAAB27JO64Z7NTBWJFE7SJKJNKY4UT72A
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus"
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < sshplus.sql
 rm -rf sshplus.sql
@@ -109,10 +109,10 @@ crontab -l > mycron
 echo "@reboot /root/startup" >> mycron
 crontab mycron
 rm mycron
-wget https://worldofdragon.net/painel/2022sshplus/cronc.sh
-wget https://worldofdragon.net/phpfix/cronb.sh
-wget https://worldofdragon.net/phpfix/clean.sh
-wget https://worldofdragon.net/phpfix/startup.sh
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronc.sh?token=GHSAT0AAAAAAB27JO65MMD4MWNJMRD6BYY2Y4UUA7Q
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronb.sh?token=GHSAT0AAAAAAB27JO65HR6Z6IHDTUFVSYNYY4UUBNA
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/clean.sh?token=GHSAT0AAAAAAB27JO655YOTXWJNPQ2A7QK6Y4UUBZA
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/startup.sh?token=GHSAT0AAAAAAB27JO65U2IZRM6S6YUHV2SWY4UUCBQ
 chmod +x *.sh
 ./startup.sh
 final
