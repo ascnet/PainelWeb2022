@@ -1,22 +1,24 @@
 #  𓊈𒆜 PAINEL VIP SONYC-PLUS 𒆜𓊉
 
 ⚠ <b>SISTEMA SUPORTADO:</b></br>
-👉 <b>(UBUNTU 18)</b></br>
+👉 <b>(Centos7)</b></br>
 
 
 ```
-apt install wget -y; bash <(wget -qO- https://github.com/lucianolima2905/Pweb-Sonyc_Plus/raw/main/install/ubuinst.sh)
+
+
 ```
 </br>
 
 # 𓊈𒆜 CHAVE DE INSTALAÇÃO! 𒆜𓊉
 ```
-@helpvpn
+
 ```
 
 # 𓊈𒆜 SINCRONIZAR NA VPS SSH! 𒆜𓊉
 ```
-apt install wget -y; bash <(wget -qO- https://github.com/lucianolima2905/Pweb-Sonyc_Plus/raw/main/install/sincpainel.sh)
+
+
 ```
 
 
