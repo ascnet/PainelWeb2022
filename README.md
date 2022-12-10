@@ -1,6 +1,6 @@
-#  𓊈𒆜 PAINEL VIP SONYC-PLUS 𒆜𓊉
+#  𓊈𒆜 PAINEL-WEB 2022 𒆜𓊉
 
-⚠ <b>SISTEMA SUPORTADO:</b></br>
+⚠ <b>SISTEMA INDICADO:</b></br>
 👉 <b>(Centos7)</b></br>
 
 
