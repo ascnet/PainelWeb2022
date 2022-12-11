@@ -66,23 +66,10 @@
 
 # 𓊈𒆜 IMAGENS: 𒆜𓊉
 
-![01](https://user-images.githubusercontent.com/65465300/201933925-90993364-fe92-4257-a611-9f92161bbdf2.png)
-
-![02](https://user-images.githubusercontent.com/65465300/201934371-a2ad1504-754b-4e5d-a864-89d8492e436b.png)
-
-![03](https://user-images.githubusercontent.com/65465300/201934516-4f14f530-c862-4fc1-9f30-2b20fbc13cd2.png)
-
-![04](https://user-images.githubusercontent.com/65465300/201934597-f1260ee7-37f0-4b51-813c-c727551fb193.png)
-
-![05](https://user-images.githubusercontent.com/65465300/201934715-f0ae20fe-d49c-469f-b9e7-fcafbb740bd0.png)
 
 ## // CRÉDITOS //
 
 @crazy_vpn
-@nandoslayer
-@swittecnologia
-@Davidsdy
-@sonycssh
 
-# 𓊈𒆜 GRUPO SONYC SSH: 𒆜𓊉
-👉 https://t.me/sonycsshgp
+# 𓊈𒆜 GRUPO MeganetVpn: 𒆜𓊉
+👉 
