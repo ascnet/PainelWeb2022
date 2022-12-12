@@ -82,7 +82,7 @@ phpmyadminfix
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/phpMyAdmin.conf?token=GHSAT0AAAAAAB27JO64MW5BTKRLK2O7H34CY4UUCWA -O /etc/httpd/conf.d/phpMyAdmin.conf
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
 installweb
@@ -97,7 +97,7 @@ cd
 createdb
 }
 createdb(){
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus2022.sh?token=GHSAT0AAAAAAB27JO64Z7NTBWJFE7SJKJNKY4UT72A
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus2022.sh
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus"
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < sshplus.sql
 rm -rf sshplus.sql
@@ -109,10 +109,10 @@ crontab -l > mycron
 echo "@reboot /root/startup" >> mycron
 crontab mycron
 rm mycron
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronc.sh?token=GHSAT0AAAAAAB27JO65MMD4MWNJMRD6BYY2Y4UUA7Q
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronb.sh?token=GHSAT0AAAAAAB27JO65HR6Z6IHDTUFVSYNYY4UUBNA
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/clean.sh?token=GHSAT0AAAAAAB27JO655YOTXWJNPQ2A7QK6Y4UUBZA
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/startup.sh?token=GHSAT0AAAAAAB27JO65U2IZRM6S6YUHV2SWY4UUCBQ
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronc.sh
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/cronb.sh
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/clean.sh
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/startup.sh
 chmod +x *.sh
 ./startup.sh
 final
