@@ -34,7 +34,7 @@ menu(){
 root_password=$(echo $RANDOM | md5sum | head -c 10; echo;)
 cake=$(curl https://bigbolgames.com)
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB ASCNET VPN 2022 Centos 7" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB-MEGANET 2022 Centos 7" ; tput sgr0 ; echo ""
 echo "Continuar? Y\n"
 echo -n "> "
 read option
@@ -89,7 +89,7 @@ installweb
 }
 installweb(){
 cd /var/www/html
-wget https://github.com/ascnet/PainelWeb2022/raw/main/2022.zip
+wget https://github.com/ascnet/PainelWeb2022/raw/main/2022.rar
 unzip 2022.zip
 sed -i "s;1010;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/
@@ -97,7 +97,7 @@ cd
 createdb
 }
 createdb(){
-wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus2022.sh
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus.sql
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus"
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < sshplus.sql
 rm -rf sshplus.sql
