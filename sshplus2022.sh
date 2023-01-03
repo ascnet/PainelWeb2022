@@ -89,7 +89,7 @@ installweb
 }
 installweb(){
 cd /var/www/html
-wget https://github.com/ascnet/PainelWeb2022/blob/main/2022.rar?raw=true
+wget https://github.com/ascnet/PainelWeb2022/raw/main/2022.rar
 unzip 2022.zip
 sed -i "s;1010;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/
