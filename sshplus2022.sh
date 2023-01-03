@@ -34,7 +34,7 @@ menu(){
 root_password=$(echo $RANDOM | md5sum | head -c 10; echo;)
 cake=$(curl https://bigbolgames.com)
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB SSHPlus 2022 Centos 7" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Instalador Painel WEB ASCNET 2022 Centos 7" ; tput sgr0 ; echo ""
 echo "Continuar? Y\n"
 echo -n "> "
 read option
