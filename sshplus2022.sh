@@ -82,14 +82,14 @@ phpmyadminfix
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf
-wget https://worldofdragon.net/phpfix/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
 installweb
 }
 installweb(){
 cd /var/www/html
-wget https://worldofdragon.net/painel/2022sshplus/2022.zip
+wget https://github.com/ascnet/PainelWeb2022/blob/main/2022.rar?raw=true
 unzip 2022.zip
 sed -i "s;1010;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/
@@ -97,7 +97,7 @@ cd
 createdb
 }
 createdb(){
-wget https://worldofdragon.net/painel/2022sshplus/sshplus.sql
+wget https://raw.githubusercontent.com/ascnet/PainelWeb2022/main/sshplus.sql
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus"
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < sshplus.sql
 rm -rf sshplus.sql
